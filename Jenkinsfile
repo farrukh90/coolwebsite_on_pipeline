@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    properties([pipelineTriggers([cron('* * * * * ')])])  
+    options([pipelineTriggers([cron('* * * * * ')])])  
     stages{
         stage("Git Clone"){
             steps{
