@@ -1,6 +1,8 @@
 pipeline {
     agent any
-    options([pipelineTriggers([cron('* * * * * ')])])  
+    triggers {
+        cron('* * * * *')
+    }  
     stages{
         stage("Git Clone"){
             steps{
